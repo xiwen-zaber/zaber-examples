@@ -1,4 +1,4 @@
-# force-mode-demo
+# Force-Controlled Motion: Integrating Load Cells with Zaber Systems in Python
 
 A  modular Python project demonstrating force-controlled motion operations using the Zaber motion system. This project includes three main demonstrations: **tactile profiling**, **compression test**, and **surface mapping** operations, all controlled via load cell feedback with automatic data recording and visualization.
 
