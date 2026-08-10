@@ -145,7 +145,7 @@ uv run src/force_mode_demo/mapping/mapping_run.py
 ## Demo-Specific Configuration
 
 To adjust the PID tuning, movement speeds, safety limits, and thresholds for a specific demo, edit its respective runner file.
-For example, to change the `COMPRESSION` operation parameters, edit `COMPRESSION_CONFIG` located inside [src/force_mode_demo/compression/compression_run.py](src/force_mode_demo/compression/compression_run.py#L1-L1).
+For example, to change the `COMPRESSION` operation parameters, edit `COMPRESSION_CONFIG` located inside [src/force_mode_demo/compression/compression_run.py](src/force_mode_demo/compression/compression_run.py).
 
 ## Safety Considerations
 

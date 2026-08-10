@@ -121,9 +121,7 @@ def compression_init(target_force: float, force_axis: Axis, settings: Compressio
     force_axis.settings.set("motion.tracking.signal.valid.di", 0)
 
 
-def compression_mvnt(
-    force_axis: Axis, settings: CompressionSettings
-) -> tuple[np.ndarray, np.ndarray]:
+def compression_mvnt(force_axis: Axis, settings: CompressionSettings) -> tuple[np.ndarray, np.ndarray]:
     """Execute the compression test movement and record data.
 
     Moves the force axis from a safe height down until the specified force

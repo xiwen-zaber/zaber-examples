@@ -65,9 +65,7 @@ def tactile_main() -> None:
                 axis.home()
 
         while True:
-            switch = input(
-                "Enter switch to use for tactile profiling demo (1-5) or 'q' to quit:"
-            ).lower()
+            switch = input("Enter switch to use for tactile profiling demo (1-5) or 'q' to quit:").lower()
             if switch in ["1", "2", "3", "4", "5"]:
                 trans_axis.move_absolute(TACTILE_LOCATIONS[int(switch) - 1], "mm")
                 tactile_run(force_axis, TACTILE_CONFIG)

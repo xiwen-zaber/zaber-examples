@@ -17,20 +17,14 @@ def run_demo_menu(z_axis: Axis, x_axis: Axis) -> None:
     """
     while True:
         mode = input(
-            "Tactile Profiling demo ('p')\n"
-            "Compression Test demo ('c')\n"
-            "Surface Mapping demo ('m')\n"
-            "Quit ('q')\n"
-            "Input: "
+            "Tactile Profiling demo ('p')\nCompression Test demo ('c')\nSurface Mapping demo ('m')\nQuit ('q')\nInput: "
         ).lower()
 
         if mode == "p":
             # Tactile Profiling Demo loop
             print("\n--- Tactile Profiling Demo ---")
             while True:
-                switch = input(
-                    "\nEnter switch to use for tactile profiling demo (1-5) or 'q' to quit:"
-                ).lower()
+                switch = input("\nEnter switch to use for tactile profiling demo (1-5) or 'q' to quit:").lower()
                 if switch in ["1", "2", "3", "4", "5"]:
                     x_axis.move_absolute(tactile_run.TACTILE_LOCATIONS[int(switch) - 1], "mm")
                     tactile_run.tactile_run(z_axis, tactile_run.TACTILE_CONFIG)
@@ -44,16 +38,12 @@ def run_demo_menu(z_axis: Axis, x_axis: Axis) -> None:
         elif mode == "c":
             print("\n--- Compression Testing Demo ---")
             x_axis.move_absolute(compression_run.COMPRESSION_POS, "mm")
-            compression_run.compression_run(
-                compression_run.TARGET_FORCE, z_axis, compression_run.COMPRESSION_CONFIG
-            )
+            compression_run.compression_run(compression_run.TARGET_FORCE, z_axis, compression_run.COMPRESSION_CONFIG)
 
         # Surface Mapping Demo
         elif mode == "m":
             print("\n--- Surface Mapping Demo ---")
-            mapping_run.mapping_run(
-                mapping_run.TARGET_FORCE, z_axis, x_axis, mapping_run.MAPPING_CONFIG
-            )
+            mapping_run.mapping_run(mapping_run.TARGET_FORCE, z_axis, x_axis, mapping_run.MAPPING_CONFIG)
 
         elif mode == "q":
             print("Exiting demo.")

@@ -148,9 +148,7 @@ def set_pid(force_axis: Axis, ki: float, kp: float) -> None:
     force_axis.settings.set("motion.tracking.kp", kp)
 
 
-def mapping_mvnt(
-    force_axis: Axis, trans_axis: Axis, settings: MappingSettings
-) -> tuple[np.ndarray, np.ndarray]:
+def mapping_mvnt(force_axis: Axis, trans_axis: Axis, settings: MappingSettings) -> tuple[np.ndarray, np.ndarray]:
     """Execute the surface mapping movement along a surface and record data.
 
     First gently touches the surface using a conservative PID tuning. Once
@@ -205,9 +203,7 @@ def mapping_mvnt(
 
     scope.stop()
     default_accel = force_axis.settings.get_default("motion.accelonly", "mm/s^2")
-    force_axis.settings.set(
-        "accel", default_accel, "mm/s^2"
-    )  # Changing accelearation back to default value
+    force_axis.settings.set("accel", default_accel, "mm/s^2")  # Changing accelearation back to default value
     print("End location reached, moving back up...")
     force_axis.move_absolute(settings.safe_z, "mm")
     print("Surface mapping operation completed")
