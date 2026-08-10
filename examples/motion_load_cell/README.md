@@ -1,12 +1,17 @@
-# Force-Controlled Motion: Integrating Load Cells with Zaber Systems in Python
+# Python Scripts for Integrating Load Cells with Zaber Motion: 3 Use Cases
+
+<p align="center">
+<img src="img/load_cell.jpg" style="max-width:30rem;" alt="Screenshot">
+</p>
 
 A  modular Python project demonstrating force-controlled motion operations using the Zaber motion system. This project includes three main demonstrations: **tactile profiling**, **compression test**, and **surface mapping** operations, all controlled via load cell feedback with automatic data recording and visualization.
 
-The accompanying article on integrating load cells with Zaber systems for surface mapping can be found [here](https://www.zaber.com/articles/tactile-surface-mapping).
+The accompanying article on integrating load cells with Zaber systems are listed below
+- [Surface Mapping](https://www.zaber.com/articles/tactile-surface-mapping)
+- Tactile Profiling: Integration guide coming soon!
+- Compression Test: Integration guide coming soon!
 
 The codebase is modular, making it easy to extract and reuse specific operations for your own applications.
-
-The corresponding article "Force Control: Integrating Load Cells with Zaber Motion Systems for Tactile Automation" how to select, wire and program Zaber stages and load cells for force-vased feedback control. [Insert link for article here]
 
 ## Features
 
@@ -42,7 +47,7 @@ Maintains a constant force setpoint while moving the translation axis across a s
 
 ## Installation
 
-### Using uv (Recommended)
+### Using uv
 
 1. Clone or download this project
 2. Install all dependencies with a single command:
@@ -51,8 +56,6 @@ Maintains a constant force setpoint while moving the translation axis across a s
    uv sync
    ```
    *This will install all dependencies and register the `force-mode-demo` command.*
-
-   *To also install development dependencies (pyright, pytest, ruff):* `uv sync --all-groups`
 
 ## Hardware Setup & Global Configuration
 
