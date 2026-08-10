@@ -28,7 +28,7 @@ dev = [
 ]
 
 [tool.pyright]
-extends = "zaber-pyright.toml"
+extends = "../../tools/tooling_config/zaber-pyright.toml"
 exclude = [".venv", ".uv-cache"]
 
 [tool.pytest.ini_options]
@@ -39,5 +39,5 @@ testpaths = ["tests"]
 filterwarnings = ["error"]
 
 [tool.ruff]
-extend = "zaber-ruff.toml"
+extend = "../../tools/tooling_config/zaber-ruff.toml"
 exclude = [".venv", ".uv-cache"]
